@@ -3,3 +3,5 @@ task 0 - A script that prints hello world followed by a newline to the standard 
 task -1 A script that print a confused smiley
 task2 - Displaying contents of a file
 task3 - Displaying contents of two files
+Listing the last 10 lines of a file
+task4 - Listing the last 10 lines of a file
