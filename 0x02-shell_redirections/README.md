@@ -7,3 +7,4 @@ Listing the last 10 lines of a file
 task4 - Listing the last 10 lines of a file
 task5- Printing the first 10lines of a file
 rask6 - printing the third line of a file.
+task7-Creating files
