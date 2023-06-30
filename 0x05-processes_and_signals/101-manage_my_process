@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 #script that manages manage_my_process
-. /lib/lsb/init-functions
-
 PIDFILE=/var/run/my_process.pid
 
 start() {
