@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#this script displays PID of your Bash process containg the bash word
+ps aux --forest | grep bash
