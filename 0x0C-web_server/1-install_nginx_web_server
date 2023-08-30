@@ -2,19 +2,8 @@
 # this script installs a nginx server that listens on
 # port 80 and retuens a page that contains hello world string
 
-apt-get update
-apt-get upgrade
-apt-get install -y nginx
-
-mkdir /etc/nginx/html
-touch /etc/nginx/html/index.html
-echo "Hello World!" > /etc/nginx/html/index.html
-print %s "server {
-    listen  80 default_server;
-    listen  [::]:80 default_server;
-    root    /etc/nginx/html;
-    index   index.html;
-}
-" > /etc/nginx/sites-available/default
-
-service nginx restart
+apt-get -y update
+apt-get -y upgrade
+apt-get -y install nginx
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+service nginx start
