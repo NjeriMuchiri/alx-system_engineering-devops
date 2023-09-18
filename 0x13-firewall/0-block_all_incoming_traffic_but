@@ -1,0 +1,4 @@
+sudo ufw enable
+sudo ufw alow 22/tcp
+sudo ufw alow 443/tcp
+sudo ufw alow 80/tcp
