@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" This script uses JSONPlaceholder API to get information about employee ID"""
+""" This script uses JSONPlaceholder API to get information
+about employee ID"""
 import requests
 import sys
 
@@ -9,7 +10,8 @@ if __name__ == "__main__":
     user = '{}users/{}'.format(url, sys.argv[1])
     response = requests.get(user)
     json_obj = response.json()
-    print("Employee {} is done with tasks".format(json_obj.get('name')), end="")
+    print("Employee {} is done with tasks"
+          .format(json_obj.get('name')), end="")
 
     todos = '{}todos?userId={}'.format(url, sys.argv[1])
     response = requests.get(todos)
