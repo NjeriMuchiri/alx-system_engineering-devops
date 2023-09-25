@@ -26,5 +26,5 @@ if __name__ == "__main__":
 
     task_done = {str(user_id): task_to}
     filename = '{}.json'.format(user_id)
-    with open(filename, mode='w') as f:
-        json.dump(task_done, f)
+    with open(filename, mode='w') as file_s:
+        json.dump(task_done, file_s)
