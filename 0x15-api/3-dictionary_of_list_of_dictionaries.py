@@ -9,7 +9,7 @@ import sys
 
 if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/'
-    user = '{}users/{}'.format(url)
+    user = '{}users'.format(url)
     response = requests.get(user)
     json_object = response.json()
     task_done = {}
@@ -18,8 +18,8 @@ if __name__ == "__main__":
         name = user.get('username')
         user_id = user.get('id')
         todos = '{}todos?userId={}'.format(url, user_id)
-        res = requests.get(todos)
-        tasks = res.json()
+        response = requests.get(todos)
+        tasks = response.json()
         task_to = []
         for task in tasks:
             dict_task = {"username": name,
