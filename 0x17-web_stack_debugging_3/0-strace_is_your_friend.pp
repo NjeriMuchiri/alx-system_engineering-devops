@@ -1,6 +1,6 @@
-# Fix 500 error when a GET HTTP method is requested to Apache web server
+# Fixes 500 error in the wordpress file wp-settngs.php
 
 exec {'replace':
-  provider => shell,
+  path     => '/usr/local/bin/:/bin/',
   command  => 'sed -i "s/phpp/php/g" /var/www/html/wp-settings.php'
 }
