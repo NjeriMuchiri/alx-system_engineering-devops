@@ -2,11 +2,11 @@
 
 exec {'replace-2':
   provider => shell,
-  command  => 'sudo sed -i "s/holberton hard/5/50000/" /etc/security/limits.conf',
+  command  => 'sudo sed -i "s/nofile hard/5/50000/" /etc/security/limits.conf',
   path     => '/usr/local/bin/:/bin/',
 }
 
 exec {'replace-2':
   provider => shell,
-  command  => 'sudo sed -i "s/holberton soft/4/50000/" /etc/security/limits.conf',
+  command  => 'sudo sed -i "s/nofile soft/4/50000/" /etc/security/limits.conf',
 }
