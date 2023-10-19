@@ -8,6 +8,5 @@ exec { 'adding-hard-file-limit-for-holberton-user':
 
 exec { 'adding-soft-file-limit-for-holberton-user':
   command => 'sed -i "/holberton soft/s/4/65000/" /etc/security/limits.conf',
-  before   => Exec['adding-soft-file-limit-for-holberton-user'],
   path    => '/usr/local/bin/:/bin/'
 }
