@@ -1,9 +1,10 @@
 #Fix problem of high amount of requests into our server
 
-exec {'replace':
+exec {'fix-nginx-server':
   provider => shell,
-  command  => 'sudo sed -i "s/ULIMIT=\"-n 15\"/ULIMIT=\"-n 4096\"/" /etc/default/nginx',
-  before   => Exac['restart'],
+  command  => 'sudo sed -i "s/15/4096/" /etc/default/nginx',
+  before   => Exec['restart'],
+  path     => '/usr/local/bin/:/bin/',
   }
 
 exec {'restart':
